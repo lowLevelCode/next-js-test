@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:latest
+    environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: lospanteraS1
+        POSTGRES_DB: nextjs-dev
+    ports:
+        - "5433:5432"
+    volumes:
+        - ./backups:/home/backups
